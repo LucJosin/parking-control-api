@@ -1,2 +1,3 @@
-# parking-control-dio
-Parking control with Spring Boot + PostgreSQL
+# parking-control-api
+
+Parking control with Spring Boot + PostgreSQLParking Control API built with Spring Boot + PostgreSQL
