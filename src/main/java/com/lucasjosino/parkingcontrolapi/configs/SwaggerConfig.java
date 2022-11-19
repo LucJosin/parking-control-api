@@ -16,6 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
     @Bean
     public Docket getDocket() {
+        //noinspection SpellCheckingInspection
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(metadata())
                 .select()
@@ -24,7 +25,7 @@ public class SwaggerConfig {
                 .build();
     }
 
-    private ApiInfo metadata() {
+    public static ApiInfo metadata() {
         return new ApiInfoBuilder()
                 .title("Parking Control API")
                 .description("Parking Control API built with Spring Boot + PostgreSQL")

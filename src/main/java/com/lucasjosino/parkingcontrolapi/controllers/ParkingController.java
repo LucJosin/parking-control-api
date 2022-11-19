@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/parkings")
+@RequestMapping("/v1/parkings")
 @Api(tags = "Parking Controller")
 @SuppressWarnings("SpellCheckingInspection")
 public class ParkingController {
