@@ -57,14 +57,14 @@ Also, see [postgres schema](./docker/postgres/migration/1_schema.sql).
 
 Use the `make` command to run/start/delete/stop the docker or [see the complete command](./Makefile).
 
-| Make     | Description                                         |
-|----------|-----------------------------------------------------|
-| dk-run   | Build & Run the local docker.`*`                    |
-| dk-start | Start the local docker.                             |
-| dk-stop  | Stop the local docker.                              |
-| dk-reset | Stop, Delete, Build and Start the local docker.`**` |
-| help     | Show all available commands.                        |
+| Make     | Description                                     |
+|----------|-------------------------------------------------|
+| dk-run   | Build & Run the local docker.`*`                |
+| dk-start | Start the local docker.                         |
+| dk-stop  | Stop the local docker.                          |
+| dk-reset | Stop, Delete, Build and Start the local docker. |
+| dk-prune | Delete all docker volumes.                      |
+| help     | Show all available commands.                    |
 
-`*` Use when running this docker for the first time. \
-`**` **Maybe** only available on Linux.
+`*` Use when running this docker for the first time.
 

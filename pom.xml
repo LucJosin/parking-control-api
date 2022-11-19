@@ -32,6 +32,14 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Tests -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- Database/Postgres -->
 		<dependency>
 			<groupId>org.postgresql</groupId>

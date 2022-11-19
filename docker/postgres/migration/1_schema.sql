@@ -4,6 +4,11 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 --
+-- Drop any existing 'parkings' table.
+--
+DROP TABLE IF EXISTS parkings;
+
+--
 -- Create 'parking' table.
 --
 CREATE TABLE parkings (

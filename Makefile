@@ -27,10 +27,16 @@ dk-stop: ## Stop the local docker.
 
 dk-reset: ## Stop, Delete, Build and Start the local docker.
 	@docker compose -f ${DOCKER_PATH} stop ${DB_NAME}
-	@sudo -rm -rf ./docker/.mysql-data/
+	@docker compose -f ${DOCKER_PATH} down --volumes
 	@docker compose -f ${DOCKER_PATH} rm ${DB_NAME}
 	@docker compose -f ${DOCKER_PATH} build ${DB_NAME}
 	@docker compose -f ${DOCKER_PATH} up ${DB_NAME}
+
+dk-prune: ## Delete all docker volumes.
+	@docker compose -f ${DOCKER_PATH} rm ${DB_NAME}
+	@cd ./docker
+	@docker volume prune
+	@cd ..
 
 ## Help
 # https://gist.github.com/thomaspoignant/5b72d579bd5f311904d973652180c705
