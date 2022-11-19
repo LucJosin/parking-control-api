@@ -1,4 +1,4 @@
-package com.lucasjosino.parkingcontrolapi.controllers.mappers;
+package com.lucasjosino.parkingcontrolapi.mappers;
 
 import com.lucasjosino.parkingcontrolapi.models.ParkingModel;
 import com.lucasjosino.parkingcontrolapi.models.dto.ParkingDTOModel;

@@ -1,37 +1,43 @@
 package com.lucasjosino.parkingcontrolapi.models;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Entity
+@Table(name = "parkings")
+@SuppressWarnings("SpellCheckingInspection")
 public class ParkingModel {
+    @Id
+    @GeneratedValue
+    @Column()
     private UUID id;
+
+    @Column(nullable = false)
     private String license;
+
+    @Column(nullable = false)
     private String state;
+
+    @Column(nullable = false)
     private String model;
-    private String color;
-    private LocalDateTime entryDate;
-    private LocalDateTime exitDate;
+
+    @Column(nullable = false)
     private Double bill;
 
-    public ParkingModel(
-        UUID id,
-        String license,
-        String state,
-        String model,
-        String color,
-        LocalDateTime entryDate,
-        LocalDateTime exitDate,
-        Double bill
-    ) {
-        this.id = id;
-        this.license = license;
-        this.state = state;
-        this.model = model;
-        this.color = color;
-        this.entryDate = entryDate;
-        this.exitDate = exitDate;
-        this.bill = bill;
-    }
+    @Column(nullable = false)
+    private int color;
+
+    @Column(name = "entry_date", nullable = false)
+    @GeneratedValue
+    private LocalDateTime entryDate;
+
+    @Column(name = "exit_date", nullable = false)
+    private LocalDateTime exitDate;
+
+    @Column(name = "updated_at", insertable = false)
+    @GeneratedValue
+    private LocalDateTime updatedAt;
 
     public ParkingModel() {
     }
@@ -68,11 +74,19 @@ public class ParkingModel {
         this.model = model;
     }
 
-    public String getColor() {
+    public Double getBill() {
+        return bill;
+    }
+
+    public void setBill(Double bill) {
+        this.bill = bill;
+    }
+
+    public int getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(int color) {
         this.color = color;
     }
 
@@ -92,11 +106,11 @@ public class ParkingModel {
         this.exitDate = exitDate;
     }
 
-    public Double getBill() {
-        return bill;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setBill(Double bill) {
-        this.bill = bill;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
