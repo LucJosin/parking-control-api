@@ -3,11 +3,13 @@ INSERT INTO parkings (
   state,
   model,
   color,
-  bill
+  bill,
+  exit_date
 ) VALUES (
-  'some',
-  'AA',
-  'name',
-  213500,
-  278.0
+  'lorem ipsum',
+  'CA',
+  'lorem ipsum',
+  16777215,
+  278.0,
+  '2022-11-18 12:05:00'
 );

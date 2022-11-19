@@ -8,11 +8,12 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 --
 CREATE TABLE parkings (
   id uuid PRIMARY KEY UNIQUE NOT NULL DEFAULT uuid_generate_v4(),
-  license char(15) NOT NULL,
-  state char(100) NOT NULL,
-  model char(100) NOT NULL,
+  license varchar(15) NOT NULL,
+  state varchar(10) NOT NULL,
+  model varchar(100) NOT NULL,
   color integer NOT NULL,
   bill double precision NOT NULL,
-  created_at timestamp NOT NULL DEFAULT now(),
+  exit_date timestamp NOT NULL,
+  entry_date timestamp NOT NULL DEFAULT now(),
   updated_at timestamp NOT NULL DEFAULT now()
 );
