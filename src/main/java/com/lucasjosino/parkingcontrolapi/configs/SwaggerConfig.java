@@ -35,7 +35,7 @@ public class SwaggerConfig {
                         new Contact(
                                 "Lucas Josino",
                                 "https://lucasjosino.com",
-                                "mauriurraco@gmail.com"
+                                "contact@lucasjosino.com"
                         )
                 )
                 .build();
